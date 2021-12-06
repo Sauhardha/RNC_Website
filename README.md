@@ -1,6 +1,6 @@
 # RNC Website
 
-# Designed & Created by: Sauhardha Pandey
+# Designed by: Sauhardha Pandey
 # For: The Riverina Nepalese Community
 
 This website is the front page for the community
