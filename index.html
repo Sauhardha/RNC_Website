@@ -1,1 +1,90 @@
 <!-- Hello World -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverina Nepalese community</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+        <a href="#" class="logo"></a>
+        <h5 class="logoTxt">RNC</h5>
+        </div>
+        
+        <div class="menu-toggle"></div>
+    </header>
+    
+    <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!--Banner-->
+    <section class="banner" id="home">
+        <img src="./images/main_bg.jpg" class="cover">
+        <div class="contentBx">
+            <h2>Riverina Nepalese Community</h2>
+            <h4>Connecting to each other & celebrating our culture</h4>
+            <a href="#" class="btn">About us</a>
+        </div>
+    </section>
+
+    <!--About Us-->
+    <section class="about" id="about">
+        <div class="title">
+            <h2>About Us</h2>
+        </div>
+        <div class="contentBx">
+            <div class="content">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora. <br><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
+                    est minima aspernatur earum modi, nam sint deserunt. 
+                    Minima quos minus tempora.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('.navigation');
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        })
+    </script>
+
+</body>
+</html>
