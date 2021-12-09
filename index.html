@@ -28,18 +28,18 @@
     <!--Banner-->
     <section class="banner" id="home">
         
-        <div class="split left">
-            <img src="./images/imgb.jpg" class="cover">
+        <div class="splitA left">
+            <img src="./images/imgA.jpeg" class="cover">
         </div>
 
-        <div class="split right">
-            <img src="./images/kang.jpg" class="cover"> 
+        <div class="splitB right">
+            <img src="./images/imgB.jpeg" class="cover"> 
         </div>
         <div class="contentBx">
             <h2>Riverina Nepalese Community</h2>
             <h4>Connecting to each other & celebrating our culture</h4>
-            <a href="#" class="btna">Nepalese</a>
-            <a href="#" class="btnb">Riverina</a>
+            <a href="#" class="btnA">Nepalese</a>
+            <a href="#" class="btnB">Riverina</a>
         </div>
         
     </section>
@@ -83,10 +83,41 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navigation = document.querySelector('.navigation');
+        const splitA = document.querySelector('.splitA');
+        const splitB = document.querySelector('.splitB');
+        const left = document.querySelector('.left');
+        const right = document.querySelector('.right');
+        const btnA = document.querySelector('.btnA');
+        const btnB = document.querySelector('.btnB');
 
         menuToggle.onclick = function(){
             menuToggle.classList.toggle('active');
             navigation.classList.toggle('active');
+        }
+
+        btnA.onmouseover = function(){
+            splitA.classList.toggle('active');
+            right.classList.toggle('splitB');
+            btnB.classList.toggle('hide');
+
+        }
+        btnA.onmouseout = function(){
+            splitA.classList.toggle('active');
+            right.classList.toggle('splitB')
+            btnB.classList.toggle('hide'); 
+
+        }
+        btnB.onmouseover = function(){
+            splitB.classList.toggle('active');
+            left.classList.toggle('splitA')
+            btnA.classList.toggle('hide');
+
+        }
+        btnB.onmouseout = function(){
+            splitB.classList.toggle('active');
+            left.classList.toggle('splitA')
+            btnA.classList.toggle('hide');
+
         }
 
         window.addEventListener('scroll', function(){
