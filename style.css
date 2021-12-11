@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neuton&display=swap');
 
 *{
     
@@ -18,11 +19,16 @@
     --lpink: #FAEDF0;
     --dblue: #161853;
     --red: #EC255A;
+    --green: #519259;
 }
 body{
+    
     min-height: 150vh;
     background: var(--base);
 }
+
+/* NAVBAR */
+
 header
 {
     position: fixed;
@@ -33,29 +39,22 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--lpink);
+    background: rgba(184, 201, 189, 0.7);
     z-index: 100;
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 1px solid #333;
     transition: 0.5s;
 }
 header.sticky{
     padding: 10px 100px;
 }
-.logo
+.cover
 {
-    
-    display: inline-block;
-    background: url(./images/logo.png);
-    width: 50px;
-    height: 50px;
-    background-size: 50px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    position: relative;
-    margin: -10px;
-
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .logoTxt{
     transform: translateX(20px);
@@ -99,7 +98,7 @@ header.sticky{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: var(--white);
+    background: var(--lpink);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +128,16 @@ header.sticky{
     text-decoration: none;
     
 }
+
+/* BANNER */
+
+.banner
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 section
 {
     font-family: 'Quattrocento', serif;
@@ -136,103 +145,85 @@ section
     padding: 100px;
     width: 100%;
     min-height: 100vh;
-    background: var(--white);
+    background: var(--base);
 
 }
-.cover
+.container
 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover
-}
-.banner
-{
-    font-family: 'Oswald', sans-serif;
-    justify-content: center;
-    align-items: center;
+    padding-top: 10vh;
+    margin: 1rem;
+    height: 85vh;
     display: flex;
-    z-index: 10;
-}
-.splitA
-{
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    transition: 1s;
-}
-.splitA.active
-{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden; 
-}
-.splitB
-{
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    transition: 1s;
-}
-.splitB.active
-{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden; 
-}
-/* Control the left side */
-.left {
-    left: 0;
 
 }
-  
-/* Control the right side */
-.right {
-    right: 0;
-}
-  .banner .contentBx
+.span
 {
-    
-    position: relative;
-    z-index: 1;
-    background: var();
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all 0.5s;
+}
+
+.Nepalese
+{
+    background: url(/images/imgA.jpeg) rgb(229, 253, 243);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 50%;
+    transition: 2s;
+}
+
+.Riverina
+{
+    background: url(/images/imgB.jpeg) rgb(191, 219, 255);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 50%;
+    transition: 2s;
+}
+
+.Nepalese.active
+{
+    width: 300%;
+}
+.Riverina.active 
+{
+    width: 300%;
+}
+.container .contentBx
+{
+    font-family: 'Neuton', sans-serif;
+    position: absolute;
+    z-index: 90;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     padding: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.banner .contentBx h2
+.container .contentBx h2
 {
     font-size: 2em;
     font-weight: 500;
     color: var(--white);
     letter-spacing: 2px;
     text-align: center;
-    text-transform: uppercase;
 }
-.banner .contentBx h4
+.container .contentBx h4
 {
     font-size: 1.2em;
     font-weight: 300;
     color: var(--white);
     letter-spacing: 4px;
     text-align: center;
-    text-transform: uppercase;
 
 }
 .btnA
@@ -243,13 +234,13 @@ section
     margin-top: 20px;
     border: 2px solid var(--black);
     color: var(--white);
-    background: var(--red);
+    background: var(--green);
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: 0.5s;
+    transition: 1.5s;
     visibility: visible;
     opacity: 1;
 }
@@ -278,7 +269,7 @@ section
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition:linear 0.5s;
+    transition: 1.5s;
     visibility: visible;
     opacity: 1;
 }
@@ -290,5 +281,57 @@ section
 .btnB:hover
 {
     color: var(--white);
-    background: var(--red);
+    background: var(--green);
+}
+
+/* ABOUT */
+
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title h2
+{
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    color: var(--black);
+}
+.title h2:before
+{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40px;
+    height: 6px;
+    background: var(--black);
+}
+p{
+    color: var(--black);
+    font-weight: 300;
+    text-align: justify;
+}
+.about .contentBx
+{
+    position: relative;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.about .contentBx .content
+{
+    position: relative;
+}
+.about .contentBx .content .imgAbt
+{
+    min-height: 400px;
 }

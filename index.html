@@ -10,11 +10,7 @@
 </head>
 <body>
     <header>
-        <div>
-        <a href="#" class="logo"></a>
         <div class="logoTxt">RNC</div>
-        </div>
-        
         <div class="menu-toggle"></div>
     </header>
     
@@ -26,23 +22,24 @@
     </ul>
 
     <!--Banner-->
-    <section class="banner" id="home">
-        
-        <div class="splitA left">
-            <img src="./images/imgA.jpeg" class="cover">
-        </div>
+    
+        <div class="container">
 
-        <div class="splitB right">
-            <img src="./images/imgB.jpeg" class="cover"> 
+            <span class="Nepalese"></span>
+    
+            <span class="Riverina"></span>
+
+            <div class="contentBx">
+                <h2>Riverina Nepalese Community</h2>
+                <h4>Connecting to each other & celebrating our culture</h4>
+                <a href="#" class="btnA">Nepalese</a>
+                <a href="#" class="btnB">Riverina</a>
+            </div>
+    
         </div>
-        <div class="contentBx">
-            <h2>Riverina Nepalese Community</h2>
-            <h4>Connecting to each other & celebrating our culture</h4>
-            <a href="#" class="btnA">Nepalese</a>
-            <a href="#" class="btnB">Riverina</a>
-        </div>
+    
         
-    </section>
+   
 
     <!--About Us-->
     <section class="about" id="about">
@@ -76,6 +73,12 @@
                     Minima quos minus tempora.
                 </p>
             </div>
+            <div class="content">
+                <div class="imgAbt">
+                    <img src="/images/imgD.jpg" class="cover">
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -83,10 +86,10 @@
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navigation = document.querySelector('.navigation');
-        const splitA = document.querySelector('.splitA');
-        const splitB = document.querySelector('.splitB');
-        const left = document.querySelector('.left');
-        const right = document.querySelector('.right');
+
+        const Nepalese = document.querySelector('.Nepalese');
+        const Riverina = document.querySelector('.Riverina');
+
         const btnA = document.querySelector('.btnA');
         const btnB = document.querySelector('.btnB');
 
@@ -96,26 +99,22 @@
         }
 
         btnA.onmouseover = function(){
-            splitA.classList.toggle('active');
-            right.classList.toggle('splitB');
+            Nepalese.classList.toggle('active');
             btnB.classList.toggle('hide');
 
         }
         btnA.onmouseout = function(){
-            splitA.classList.toggle('active');
-            right.classList.toggle('splitB')
+            Nepalese.classList.toggle('active');
             btnB.classList.toggle('hide'); 
 
         }
         btnB.onmouseover = function(){
-            splitB.classList.toggle('active');
-            left.classList.toggle('splitA')
+            Riverina.classList.toggle('active');
             btnA.classList.toggle('hide');
 
         }
         btnB.onmouseout = function(){
-            splitB.classList.toggle('active');
-            left.classList.toggle('splitA')
+            Riverina.classList.toggle('active'); 
             btnA.classList.toggle('hide');
 
         }
