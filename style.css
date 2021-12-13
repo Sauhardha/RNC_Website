@@ -17,6 +17,7 @@
     --base: #F6F5F5;
     --blue: #292C6D;
     --lpink: #FAEDF0;
+    --lblue: #F3F9FB;
     --dblue: #161853;
     --red: #EC255A;
     --green: #519259;
@@ -39,7 +40,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(184, 201, 189, 0.7);
+    background: rgb(37, 157, 204);
     z-index: 100;
     border-bottom: 1px solid #333;
     transition: 0.5s;
@@ -57,13 +58,12 @@ header.sticky{
     object-fit: cover;
 }
 .logoTxt{
-    transform: translateX(20px);
     display: inline-block;
     position: relative;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Neuton', sans-serif;
     font-size: 1.2em;
     letter-spacing: 5px;
-    font-weight: 400;
+    font-weight: 800;
     text-decoration: none; 
     color: black;
     
@@ -98,7 +98,7 @@ header.sticky{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: var(--lpink);
+    background: var(--lblue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,21 +137,10 @@ header.sticky{
     justify-content: center;
     align-items: center;
 }
-
-section
-{
-    font-family: 'Quattrocento', serif;
-    position: relative;
-    padding: 100px;
-    width: 100%;
-    min-height: 100vh;
-    background: var(--base);
-
-}
 .container
 {
-    padding-top: 10vh;
-    margin: 1rem;
+    padding-top: 8vh;
+    margin: 2rem;
     height: 85vh;
     display: flex;
 
@@ -173,9 +162,8 @@ section
     background-size: cover;
     background-blend-mode: multiply;
     width: 50%;
-    transition: 2s;
+    transition: 1.2s;
 }
-
 .Riverina
 {
     background: url(/images/imgB.jpeg) rgb(191, 219, 255);
@@ -183,7 +171,7 @@ section
     background-size: cover;
     background-blend-mode: multiply;
     width: 50%;
-    transition: 2s;
+    transition: 1.2s;
 }
 
 .Nepalese.active
@@ -194,12 +182,24 @@ section
 {
     width: 300%;
 }
+
+.imgLogo
+{
+    background: url(/images/logo.png);
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .container .contentBx
 {
     font-family: 'Neuton', sans-serif;
     position: absolute;
     z-index: 90;
-    top: 0;
+    top: 5vh;
     left: 0;
     width: 100%;
     height: 100%;
@@ -209,10 +209,14 @@ section
     align-items: center;
     flex-direction: column;
 }
+.container .contentBx .heading
+{
+    padding: 2rem;
+}
 .container .contentBx h2
 {
-    font-size: 2em;
-    font-weight: 500;
+    font-size: 3.2em;
+    font-weight: 800;
     color: var(--white);
     letter-spacing: 2px;
     text-align: center;
@@ -226,13 +230,19 @@ section
     text-align: center;
 
 }
+.btnCouple
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
 .btnA
 {
     position: relative;
     display: inline-block;
-    padding: 8px 20px;
+    padding: 18px 58px;
     margin-top: 20px;
-    border: 2px solid var(--black);
+    border: 2px solid var(--white);
     color: var(--white);
     background: var(--green);
     text-decoration: none;
@@ -240,28 +250,29 @@ section
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: 1.5s;
+    transition: 1.6s;
     visibility: visible;
     opacity: 1;
 }
 .btnA.hide
 {
+    transition: 0.5s;
     opacity: 0;
     visibility: hidden;
 }
 .btnA:hover
 {
+    transform: translateX(8rem);
     color: var(--white);
     background: var(--dblue);
 }
-
 .btnB
 {
     position: relative;
     display: inline-block;
-    padding: 8px 20px;
+    padding: 18px 58px;
     margin-top: 20px;
-    border: 2px solid var(--black);
+    border: 2px solid var(--white);
     color: var(--white);
     background: var(--blue);
     text-decoration: none;
@@ -269,23 +280,48 @@ section
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: 1.5s;
+    transition: 1.6s;
     visibility: visible;
     opacity: 1;
 }
 .btnB.hide
 {
+    transition: 0.5s;
     opacity: 0;
     visibility: hidden;
 }
 .btnB:hover
 {
+    transform: translateX(-6rem);
     color: var(--white);
     background: var(--green);
 }
 
 /* ABOUT */
 
+section
+{
+    font-family: 'Quattrocento', serif;
+    position: relative;
+    padding: 2rem;
+    width: 100%;
+    min-height: 60vh;
+    background: var(--base);
+
+}
+/*
+.container:before
+{
+    content: '';
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: linear-gradient(to top, var(--base), transparent);
+}
+*/
 .title
 {
     width: 100%;
@@ -319,6 +355,12 @@ p{
     font-weight: 300;
     text-align: justify;
 }
+.about
+{
+    
+    min-height: 60vh;
+    margin-top: 6rem;
+}
 .about .contentBx
 {
     position: relative;
@@ -329,9 +371,107 @@ p{
 }
 .about .contentBx .content
 {
+    font-size: 18px;
     position: relative;
 }
 .about .contentBx .content .imgAbt
 {
-    min-height: 400px;
+    min-height: 480px;
+    
+}
+
+/* COMMUNITY MEMORIES */
+
+.fitBg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.title p
+{
+    margin-top: 40px;
+    max-width: 700px;
+    text-align: center;
+}
+.btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 20px;
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--black);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.mems
+{
+
+    text-align: center;
+    
+}
+.mems .memoryList
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.mems .memoryList .box
+{
+    position: relative;
+    width: 26vw;
+    height: 480px;
+    background: #191919;
+    transition: 0.5s;
+    margin: 10px;
+}
+.mems .memoryList .box:hover .box
+{
+    opacity: 0.2;
+}
+.mems .memoryList .box:hover
+{
+    opacity: 0.2;
+}
+.mems .memoryList .box .imgBox
+{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.mems .memoryList .box .boxContent
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mems .memoryList .box .boxContent h3
+{
+    
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.2em;
+}
+.mems .memoryList .box .boxContent h3 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+    opacity: 0.5;
 }
