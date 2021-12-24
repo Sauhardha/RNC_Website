@@ -40,9 +40,9 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(37, 157, 204);
+    background: rgba(9, 62, 177, 0.8);
     z-index: 100;
-    border-bottom: 1px solid #333;
+    border-bottom: 8px solid #333;
     transition: 0.5s;
 }
 header.sticky{
@@ -139,7 +139,7 @@ header.sticky{
 }
 .container
 {
-    padding-top: 8vh;
+    padding-top: 5vh;
     margin: 2rem;
     height: 85vh;
     display: flex;
@@ -162,16 +162,16 @@ header.sticky{
     background-size: cover;
     background-blend-mode: multiply;
     width: 50%;
-    transition: 1.2s;
+    transition: 1.6s;
 }
 .Riverina
 {
-    background: url(/images/imgB.jpeg) rgb(191, 219, 255);
+    background: url(/images/imgF.jpeg) rgb(191, 219, 255);
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
     width: 50%;
-    transition: 1.2s;
+    transition: 1.6s;
 }
 
 .Nepalese.active
@@ -235,6 +235,7 @@ header.sticky{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
+    
 }
 .btnA
 {
@@ -292,10 +293,11 @@ header.sticky{
 }
 .btnB:hover
 {
-    transform: translateX(-6rem);
+    transform: translateX(-7rem);
     color: var(--white);
     background: var(--green);
 }
+
 
 /* ABOUT */
 
@@ -380,6 +382,43 @@ p{
     
 }
 
+/* FEATURED BANNER */
+.featured
+{
+    
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 3rem;
+    min-height: 40vh;
+    display: grid;
+ 
+}
+.f-col
+{
+    padding: 0px 15px;
+}
+.sq-logo
+{
+    padding: 1rem;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.rect-logo
+{
+    padding: 1rem;
+    transform: translateY(1rem);
+    position: relative;
+    width: 220px;
+    height: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* COMMUNITY MEMORIES */
 
 .fitBg
@@ -418,23 +457,24 @@ p{
 
 .mems
 {
-
     text-align: center;
     
 }
 .mems .memoryList
 {
+    margin: 0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 40px;
+    
 }
 .mems .memoryList .box
 {
     position: relative;
-    width: 26vw;
+    width: 30vw;
     height: 480px;
     background: #191919;
     transition: 0.5s;
@@ -474,4 +514,106 @@ p{
     font-size: 0.8em;
     font-weight: 300;
     opacity: 0.5;
+}
+
+/* FOOTER */
+.foot-container
+{
+    max-width: 1170px;
+    margin: auto;
+}
+.footer
+{
+    background-color: #24262b;
+    padding: 70px 70px;
+
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul
+{
+    list-style: none;
+}
+.footer-col
+{
+    width: 33%;
+    padding: 0px 15px;
+}
+.footer-col h4
+{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--green);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+
+}
+.footer-col ul li:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+.footer-col ul li a
+{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover
+{
+    color: #fff;
+    padding-left: 8px;
+
+}
+.footer-col .social-links a
+{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover
+{
+    color: #24262b;
+    background-color: #fff;
+
+}
+
+/* Responsiveness */
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
 }
