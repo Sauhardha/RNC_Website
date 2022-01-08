@@ -18,7 +18,6 @@
     <ul class="navigation">
         <li><a href="#">Home</a></li>
         <li><a href="#">Gallery</a></li>
-        <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
 
@@ -31,10 +30,17 @@
             <div class="Riverina"></div>
 
             <div class="contentBx">
-                <div class="imgLogo"></div>
+                <!--<div class="imgLogo"></div>-->
                 <div class="heading">
-                    <h2>Riverina Nepalese Community</h2>
-                    <h4>Connecting to each other & celebrating our culture</h4>
+                    <span>
+                        <h2 class="mainHead">Riverina Nepalese Community</h2>
+                        <h2 class="nHead hide">Nepalese Side</h2>
+                        <h2 class="rHead hide">Riverina Side</h2>
+                    </span>
+                    <span>
+                        <h4>Connecting to each other & celebrating our culture</h4>
+                    </span>
+                    
                 </div>
                 
                 <div class="btnCouple">
@@ -56,33 +62,68 @@
         </div>
 
         <div class="contentBx">
-            <div class="content">
+            <div class="intro-about-left">
+                <h1>This is the intro part of the left about</h1>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
-                    est minima aspernatur earum modi, nam sint deserunt. 
-                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
-                    est minima aspernatur earum modi, nam sint deserunt. 
-                    Minima quos minus tempora. <br><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
-                    est minima aspernatur earum modi, nam sint deserunt. 
-                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
-                    est minima aspernatur earum modi, nam sint deserunt. 
-                    Minima quos minus tempora.<br><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
-                    est minima aspernatur earum modi, nam sint deserunt. 
-                    Minima quos minus tempora. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Obcaecati voluptas, non dicta id at dolore quasi sit architecto 
-                    est minima aspernatur earum modi, nam sint deserunt. 
-                    Minima quos minus tempora.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum magni quos voluptates sunt. 
+                    Alias assumenda libero eaque ut dolore quaerat, 
+                    accusamus, ipsa eum architecto, maxime dolorum sit corporis minima? Porro?
                 </p>
             </div>
 
-            <div class="content">
-                <div class="imgAbt">
-                    <img src="/images/imgE.jpg" class="cover">
+            <div class="intro-about-right">
+                <div class="intro-about-list" style="transform: matrix(1, 0, 0, 1, -22.8);">
+                    
+                    <div class="intro-about-boxes">
+                        <div class="intro-about-icon">
+                            <img width="100px" height="100px" src="/images/nepalese.png">
+                        </div>
+
+                        <div class="intro-about-item">
+                            <h3>Item one</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit itaque ea illum maxime natus amet delectus 
+                                eos alias consequuntur impedit.</p>
+                        </div>
+                    </div>
+
+                    <div class="intro-about-boxes">
+                        <div class="intro-about-icon">
+                            <img width="100px" height="100px" src="/images/help.png">
+                        </div>
+
+                        <div class="intro-about-item">
+                            <h3>Item two</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit itaque ea illum maxime natus amet delectus 
+                                eos alias consequuntur impedit.</p>
+                        </div>
+                    </div>
+
+                    <div class="intro-about-boxes">
+                        <div class="intro-about-icon">
+                            <img width="100px" height="100px" src="/images/diwali.png">
+                        </div>
+
+                        <div class="intro-about-item">
+                            <h3>Item three</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit itaque ea illum maxime natus amet delectus 
+                                eos alias consequuntur impedit.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="intro-about-boxes">
+                        <div class="intro-about-icon">
+                            <img width="100px" height="100px" src="/images/group.png">
+                        </div>
+
+                        <div class="intro-about-item">
+                            <h3>Item four</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit itaque ea illum maxime natus amet delectus 
+                                eos alias consequuntur impedit.</p>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
 
@@ -196,6 +237,10 @@
         const btnA = document.querySelector('.btnA');
         const btnB = document.querySelector('.btnB');
 
+        const mainHead = document.querySelector('.mainHead')
+        const nHead = document.querySelector('.nHead')
+        const rHead = document.querySelector('.rHead')
+
         menuToggle.onclick = function(){
             menuToggle.classList.toggle('active');
             navigation.classList.toggle('active');
@@ -205,21 +250,29 @@
             Nepalese.classList.toggle('active');
             btnB.classList.toggle('hide');
 
+            mainHead.classList.toggle('hide');
+            nHead.classList.toggle('hide');
         }
         btnA.onmouseout = function(){
             Nepalese.classList.toggle('active');
             btnB.classList.toggle('hide'); 
 
+            mainHead.classList.toggle('hide');
+            nHead.classList.toggle('hide');
         }
         btnB.onmouseover = function(){
             Riverina.classList.toggle('active');
             btnA.classList.toggle('hide');
 
+            mainHead.classList.toggle('hide');
+            rHead.classList.toggle('hide');
         }
         btnB.onmouseout = function(){
             Riverina.classList.toggle('active'); 
             btnA.classList.toggle('hide');
 
+            mainHead.classList.toggle('hide');
+            rHead.classList.toggle('hide');
         }
 
         window.addEventListener('scroll', function(){

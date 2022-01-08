@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Neuton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 *{
     
@@ -40,7 +41,7 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(9, 62, 177, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     z-index: 100;
     border-bottom: 8px solid #333;
     transition: 0.5s;
@@ -155,6 +156,7 @@ header.sticky{
     transition: all 0.5s;
 }
 
+
 .Nepalese
 {
     background: url(/images/imgA.jpeg) rgb(229, 253, 243);
@@ -230,6 +232,48 @@ header.sticky{
     text-align: center;
 
 }
+.mainHead
+{
+    position: absolute;
+    transition: 1.2s ease;
+    opacity: 1;
+}
+.nHead
+{
+    position: static;
+    display: center;
+    align-items: center;
+    transition: 1.2s ease;
+    opacity: 1;
+
+}
+.rHead
+{
+    position: static;
+    display: center;
+    align-items: center;
+    transition: 1.2s ease;
+    opacity: 1;
+    
+}
+.mainHead.hide
+{
+    visibility: hidden;
+    transition: 0.1s ease;
+    opacity: 0;
+}
+.nHead.hide
+{
+    visibility: hidden;
+    transition: 0.1s ease;
+    opacity: 0;
+}
+.rHead.hide
+{
+    visibility: hidden;
+    transition: 0.1s ease;
+    opacity: 0;
+}
 .btnCouple
 {
     display: grid;
@@ -267,6 +311,7 @@ header.sticky{
     color: var(--white);
     background: var(--dblue);
 }
+
 .btnB
 {
     position: relative;
@@ -311,6 +356,7 @@ section
     background: var(--base);
 
 }
+
 /*
 .container:before
 {
@@ -366,26 +412,86 @@ p{
 .about .contentBx
 {
     position: relative;
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-}
-.about .contentBx .content
-{
-    font-size: 18px;
-    position: relative;
-}
-.about .contentBx .content .imgAbt
-{
-    min-height: 480px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    min-height: 70vh;
     
+}
+.intro-about-left
+{
+    width: 43%;
+    float: left;
+    position: relative;
+    padding-top: 1rem;
+    margin: 2rem;
+}
+.intro-about-left h1
+{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 4rem;
+    font-weight: 600;
+    
+    
+}
+.intro-about-left p
+{
+    font-family: 'Neuton, sans-serif';
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    
+}
+.intro-about-right
+{
+    margin-left: 51%;
+    padding-top: 4rem;
+}
+
+.intro-about-icon
+{
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.intro-about-boxes
+{   
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+    margin-bottom: 2rem;
+    margin-right: 1.5rem;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.intro-about-item
+{
+    
+    
+    
+    
+}
+
+.intro-about-item h3
+{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+}
+
+.intro-about-item p
+{
+    font-size: 1.1rem;
 }
 
 /* FEATURED BANNER */
 .featured
 {
-    
+    position: relative;
     align-items: center;
     justify-content: center;
     background-color: white;
