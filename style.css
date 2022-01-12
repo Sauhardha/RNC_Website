@@ -33,102 +33,65 @@ body{
 
 header
 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 100;
-    border-bottom: 8px solid #333;
-    transition: 0.5s;
-}
-header.sticky{
-    padding: 10px 100px;
-}
-.cover
-{
     position: absolute;
-    top: 0;
-    left: 0;
+    z-index: 100;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
-.logoTxt{
-    display: inline-block;
-    position: relative;
-    font-family: 'Neuton', sans-serif;
-    font-size: 1.2em;
-    letter-spacing: 5px;
+
+.nav-container
+{
+
+}
+
+.navbar
+{
+    padding: 20px 0;
+}
+
+.navbar-brand
+{
     font-weight: 800;
-    text-decoration: none; 
-    color: black;
-    
+    text-transform: uppercase;
+    font-size: 2em;
+    color: var(--black);
+    padding-left: 10vw;
 }
-.menu-toggle
+
+.nav-item
 {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    background: url(./images/menu.png);
-    background-size: 35px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 5px;
 }
-.menu-toggle.active
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link
 {
-    position: relative;
-    width: 35px;
-    height: 35px;
-    background: url(./images/close.png);
-    background-size: 35px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer; 
+    background: var(--black);
+    color: #fff;
 }
-.navigation
-{
-    font-family: 'Mate SC', serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--lblue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 99;
-    transition: 0.25s;
-    opacity: 0;
-    visibility: hidden;
-}
-.navigation.active
-{
-    opacity: 1;
-    visibility: visible;
-}
-.navigation li
-{
-    list-style: none;
-    margin: 10px 0;
-}
-.navigation li a
+
+.navbar-light .navbar-nav .nav-item .nav-link
 {
     color: var(--black);
-    font-size: 1.2em;
-    letter-spacing: 5px;
-    display: inline-block;
-    font-weight: 500;
-    text-decoration: none;
-    
+    padding: 5px 15px;
 }
+
+.navbar-light .navbar-toggler
+{
+    border: none;
+    color: #fff;
+    border: 2px solid #7f7f7f;
+    border-radius: 0;
+    outline: none;
+}
+
+.navbar-collapse
+{
+    background: #fff;
+}
+
+
 
 /* BANNER */
 
@@ -146,7 +109,7 @@ header.sticky{
     display: flex;
 
 }
-.span
+/*.span
 {
     height: 100%;
     display: flex;
@@ -154,7 +117,7 @@ header.sticky{
     justify-content: center;
     flex: 1;
     transition: all 0.5s;
-}
+}*/
 
 
 .Nepalese
@@ -729,8 +692,20 @@ p{
 }
 
 
+/* GALLERY */
 
-
+.item{
+    transition: 0.5s ease-in-out;
+}
+.item:hover{
+    filter: brightness(70%);
+}
+.item img{
+    object-fit: cover;
+}
+.container-fluid{
+    padding-top: 10vh;
+}
 
 
 
