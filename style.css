@@ -103,16 +103,6 @@ header
     display: flex;
 
 }
-/*.span
-{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    transition: all 0.5s;
-}*/
-
 
 .Nepalese
 {
@@ -568,12 +558,13 @@ p{
 .mems
 {
     text-align: center;
-    min-height: 120vh;
+    min-height: 100vh;
+    
 }
 
 .mems .title
 {
-    margin-top: 80px;
+    margin-top: 150px;
 }
 
 .mems .memoryList
@@ -590,7 +581,7 @@ p{
 .mems .memoryList .box
 {
     position: relative;
-    width: 30vw;
+    width: 22rem;
     height: 480px;
     background: #191919;
     transition: 0.5s;
@@ -963,6 +954,118 @@ ul
     .footer-col{
         width: 100%;
     }
+
+    /* Banner */
+
+    .container-fluid .contentBx .heading
+    {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: inline-block;
+       
+    }
+    .container-fluid .contentBx h2
+    {
+        position:relative;
+        font-size: 2em;
+        font-weight: 800;
+        color: var(--white);
+        letter-spacing: 2px;
+        text-align: center;
+        justify-content: center;
+    
+    }
+    .container-fluid .contentBx h4
+    {
+        position: relative;
+        font-size: 1em;
+        font-weight: 300;
+        color: var(--white);
+        letter-spacing: 2px;
+        text-align: center;
+    
+    }
+    .mainHead
+    {
+        
+        transition: 1.2s ease;
+        opacity: 1;
+        top: 100px;
+        
+    }
+    .nHead
+    {
+        bottom: 10px;
+        position: static;
+        display: center;
+        align-items: center;
+        transition: 1.2s ease;
+        opacity: 1;
+        padding: 20px;
+    
+    }
+    .rHead
+    {
+        position: static;
+        bottom: 165px;
+        display: center;
+        align-items: center;
+        transition: 1.2s ease;
+        opacity: 1;
+        padding: 20px;
+        
+    }
+
+    .btnCouple
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        text-decoration: none;
+        position: relative;
+        
+        
+    }
+    .btnA
+    {
+        position: relative;
+        display: inline-block;
+        padding: 12px 20px;
+        margin-top: 40px;
+        border: 2px solid var(--white);
+        color: var(--white);
+        background: var(--green);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: 1.6s;
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .btnB
+    {
+        position: relative;
+        display: inline-block;
+        padding: 12px 20px;
+        margin-top: 40px;
+        border: 2px solid var(--white);
+        color: var(--white);
+        background: var(--dblue);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: 1.6s;
+        visibility: visible;
+        opacity: 1;
+        
+    }
+   
 
     /* Main section */
     .intro-about-left
