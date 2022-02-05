@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riverina Nepalese community</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="aos-by-red.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
@@ -52,7 +54,7 @@
 
     <!--Banner-->
     
-        <div class="container-fluid">
+        <div class="container-fluid pl-0 pr-0">
 
             <div class="Nepalese"></div>
     
@@ -67,7 +69,7 @@
                         <h2 class="rHead hide">The Area With Great Opportunity</h2>
                     </div>
                     <div>
-                        <h4>Connecting to each other & celebrating our culture</h4>
+                        <h4>Connecting with each other & celebrating our culture</h4>
                     </div>
                     
                 </div>
@@ -82,14 +84,13 @@
         </div>
     
         
-   
 
     <!--About Us-->
     <section class="about" id="about">
 
         <div class="contentBx">
             <div class="about-back">
-            <div class="intro-about-left">
+            <div class="intro-about-left" data-aos="fade-up" data-aos-duration="1000">
                 <h1>This is the intro part of the left about</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum magni quos voluptates sunt. 
@@ -98,7 +99,7 @@
                 </p>
             </div>
 
-            <div class="intro-about-right">
+            <div class="intro-about-right" data-aos="fade-up" data-aos-duration="2000">
                 <div class="intro-about-list" style="transform: matrix(1, 0, 0, 1, -22.8);">
                     
                     <div class="intro-about-boxes">
@@ -158,6 +159,20 @@
 
     </section>
 
+    <!-- Upcoming event -->
+    <section class="upcoming" id="upcoming">
+        
+            <div class="uHeading" data-aos="fade-up" data-aos-duration="2000">
+                <h1>Upcoming Events:</h1>
+                <h2>The Nepalese New Year is soon! 
+                    <br>- April 14 -<br> 
+                    Follow our Facebook page for updates on our community barbeque.
+                </h2>
+            </div>
+            
+        
+    </section>
+
     <!-- Banner As Featured -->
     <div class="featured" id="featured">
         <h4 style="font-family:monospace;">In co-operation with</h4>
@@ -191,7 +206,7 @@
         <div class="memoryList">
             <divi class="box">
                 <div class="imgBox">
-                    <img src="images/imgD.jpg" class="fitBg">
+                    <img src="/RNC GAL/G6.jpg" class="fitBg">
                 </div>
                 <div class="boxContent">
                     <h3>Memory One<br><span>Memory Name</span></h3>
@@ -200,7 +215,7 @@
 
             <div class="box">
                 <div class="imgBox">
-                    <img src="images/imgB.jpeg" class="fitBg">
+                    <img src="/images/imgE.jpg" class="fitBg">
                 </div>
                 <div class="boxContent">
                     <h3>Memory Two<br><span>Memory Name</span></h3>
@@ -209,7 +224,7 @@
 
             <div class="box">
                 <div class="imgBox">
-                    <img src="images/imgC.jpg" class="fitBg">
+                    <img src="/RNC GAL/G1.jpg" class="fitBg">
                 </div>
                 <div class="boxContent">
                     <h3>Memory Three<br><span>Memory Name</span></h3>
@@ -269,6 +284,8 @@
         const nHead = document.querySelector('.nHead')
         const rHead = document.querySelector('.rHead')
 
+        
+
         btnA.onmouseover = function(){
             Nepalese.classList.toggle('active');
             btnB.classList.toggle('hide');
@@ -302,6 +319,11 @@
             const header = document.querySelector('header');
             header.classList.toggle('sticky', window.scrollY > 0);
         })
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>
