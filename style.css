@@ -199,13 +199,13 @@ header
 }
 .mainHead
 {
-    
+    top: 120px;
     transition: 1.7s ease;
     opacity: 1;
 }
 .nHead
 {
-    bottom: 80px;
+    top: 40px;
     position: static;
     display: center;
     align-items: center;
@@ -216,7 +216,7 @@ header
 .rHead
 {
     position: static;
-    bottom: 165px;
+    bottom: 40px;
     display: center;
     align-items: center;
     transition: 1.7s ease;
@@ -913,12 +913,14 @@ ul
     }
 }
 
-
 @media(max-width: 825px){
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
     }
+
+    /* BANNER */
+
 
     /* Main section */
     .intro-about-left
@@ -1077,7 +1079,13 @@ ul
         visibility: visible;
         opacity: 1;
     }
-    
+    .btnA:hover
+    {
+        transform: translateX(4.5rem);
+        color: var(--white);
+        background: var(--dblue);
+        text-decoration: none;
+    }
     .btnB
     {
         position: relative;
@@ -1096,6 +1104,14 @@ ul
         visibility: visible;
         opacity: 1;
         
+    }
+
+    .btnB:hover
+    {
+        transform: translateX(-4.5rem);
+        color: var(--white);
+        background: var(--green);
+        text-decoration: none;
     }
    
 
