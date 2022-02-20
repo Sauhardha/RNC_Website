@@ -506,7 +506,6 @@ p{
 .upcoming
 {
     min-height: 70vh;
-    background: url(/images/Fusion.jpg);
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
@@ -517,6 +516,7 @@ p{
 .uHeading
 {
     padding: 2rem;
+    
 }
 
 .uHeading h1
@@ -524,7 +524,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--black);
     padding-top: 7vh;
     font-family: 'Abril Fatface', cursive;
     font-size: 4rem;
@@ -539,7 +538,6 @@ p{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--black);
     padding-top: 10vh;
     padding-left: 10%;
     padding-right: 10%;
@@ -1185,7 +1183,6 @@ ul
     .upcoming
     {
         min-height: 70vh;
-        background: url(/images/Fusion.jpg);
         background-repeat: no-repeat;
         object-fit: fill;
         background-size: contain;
@@ -1204,7 +1201,6 @@ ul
         display: flex;
         justify-content: center;
         align-items: center;
-        color: var(--black);
         padding-top: 7vh;
         font-family: 'Abril Fatface', cursive;
         font-size: 2.5rem;
@@ -1219,7 +1215,6 @@ ul
         justify-content: center;
         align-items: center;
         text-align: center;
-        color: var(--black);
         padding-top: 10vh;
         padding-left: 10%;
         padding-right: 10%;
