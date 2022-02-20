@@ -55,26 +55,29 @@
     <section class="contact">
         <div class="title">
             <h2 style="margin-top: 0px;">Get in Touch</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Quo sequi excepturi alias illo inventore similique illum quas? 
-            Voluptas quae consequuntur totam.</p>
+            <p>If you have any enquiries & would like to contact us,
+                whether you are a business, organisation or just curious, please
+                feel free to send us a message.
+            </p>
             <img width="120px" height="120px" src="/images/logo.png" alt="" style="margin-top: 30px">
         </div>
         <div class="contactForm" >
+            <form onsubmit="sendEmail(); reset(); return false;">
             <div class="row">
-                <input type="text" name="" placeholder="First Name">
-                <input type="text" name="" placeholder="Last Name">
+                <input type="text" id="fName" placeholder="First Name">
+                <input type="text" id="lName" placeholder="Last Name">
             </div>
             <div class="row">
-                <input type="text" name="" placeholder="Email Address">
-                <input type="text" name="" placeholder="Mobile Number">
+                <input type="text" id="emailAdd" placeholder="Email Address">
+                <input type="text" id="mobileNo" placeholder="Mobile Number">
             </div>
             <div class="row2">
-                <textarea placeholder="Message"></textarea>
+                <textarea id="message" placeholder="Message"></textarea>
             </div>
             <div class="row2">
                 <input type="submit" value="send" class="btn"></input>
             </div>
+            </form>
         </div>
     </section>
 
@@ -89,31 +92,48 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#" onclick="return false;">Copyright ©2022 Riverina Nepalese Community. Designed By Sauhardha Pandey.</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Our Contacts</h4>
                     <ul>
-                        <li><a href="#">President: john.doe@gmail.com</a></li>
-                        <li><a href="#">Secretary: mary.smith@gmail.com</a></li>
+                        <li><a href="#">Email: rncwagga2016@gmail.com</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/www.nepalesecommunity.riv.com.au/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/sauhardha-pandey-b4b626232/"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "RNC.contact.host@gmail.com",
+                Password : "cwhqqjhrhqwwsybu",
+                To : 'sauhardhap484@gmail.com',
+                From : document.getElementById("emailAdd").value,
+                Subject : "New RNC Contact Enquiry",
+                Body : "First Name: " + document.getElementById("fName").value
+                + "<br> Last Name: " + document.getElementById("lName").value
+                + "<br> Email: " + document.getElementById("emailAdd").value
+                + "<br> Mobile No: " + document.getElementById("mobileNo").value
+                + "<br> Message: " + document.getElementById("message").value
+            }).then(
+        message => alert("Message Sent Successfully")
+        );
+        }
+    </script>
 
 </body>
-
+</html>

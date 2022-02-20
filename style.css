@@ -506,8 +506,12 @@ p{
 .upcoming
 {
     min-height: 70vh;
-    background: url(/images/NY.jpeg);
+    background: url(/images/Fusion.jpg);
     background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    
 }
 
 .uHeading
@@ -520,7 +524,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--black);
     padding-top: 7vh;
     font-family: 'Abril Fatface', cursive;
     font-size: 4rem;
@@ -535,7 +539,7 @@ p{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--black);
     padding-top: 10vh;
     padding-left: 10%;
     padding-right: 10%;
@@ -1176,4 +1180,51 @@ ul
         font-size: 1.1rem;
     }
 
+
+    /* Upcoming */
+    .upcoming
+    {
+        min-height: 70vh;
+        background: url(/images/Fusion.jpg);
+        background-repeat: no-repeat;
+        object-fit: fill;
+        background-size: contain;
+        background-position: center;
+        
+        
+    }
+
+    .uHeading
+    {
+        padding: 2rem;
+    }
+    
+    .uHeading h1
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--black);
+        padding-top: 7vh;
+        font-family: 'Abril Fatface', cursive;
+        font-size: 2.5rem;
+        font-weight: 600;  
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+    }
+    .uHeading h2
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--black);
+        padding-top: 10vh;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 1.5rem;
+    
+    }
+    
 }
