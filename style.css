@@ -106,7 +106,7 @@ header
 
 .Nepalese
 {
-    background: url(/images/main_bg.jpg) rgb(229, 253, 243);
+    background: url(/images/main_bg.jpeg) rgb(229, 253, 243);
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -115,7 +115,7 @@ header
 }
 .Riverina
 {
-    background: url(/images/Wagga.jpg) rgb(191, 219, 255);
+    background: url(/images/Wagga.jpeg) rgb(191, 219, 255);
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
