@@ -106,7 +106,7 @@ header
 
 .Nepalese
 {
-    background: url(/images/main_bg.jpeg) rgb(229, 253, 243);
+    background: url(/images/main_bg.jpeg) rgb(0, 0, 0, 0.3);
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -115,7 +115,7 @@ header
 }
 .Riverina
 {
-    background: url(/images/Wagga.jpeg) rgb(191, 219, 255);
+    background: url(/images/Wagga.jpeg) rgb(0, 0, 0, 0.3);
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
@@ -1201,7 +1201,7 @@ ul
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 7vh;
+        padding-top: 6vh;
         font-family: 'Abril Fatface', cursive;
         font-size: 2.5rem;
         font-weight: 600;  
